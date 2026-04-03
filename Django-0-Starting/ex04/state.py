@@ -1,6 +1,6 @@
 import sys
 
-def find_capital():
+def find_state():
     states = {
         "Oregon" : "OR",
         "Alabama" : "AL",
@@ -29,4 +29,4 @@ def find_capital():
             print("unknown capital city")
 
 if __name__ == '__main__':
-	find_capital()
+	find_state()
