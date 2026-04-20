@@ -1,6 +1,5 @@
 import sys
 import os
-import re
 
 def generateHTML(output, name):
     with open(f"{name}.html", "w") as f:
