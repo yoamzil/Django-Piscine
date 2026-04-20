@@ -1,2 +1,32 @@
-<p>"-Who are you?
--A {name}!"</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{name} {surname} - CV</title>
+</head>
+<body>
+    <header>
+        <h1>{name} {surname}</h1>
+        <p>{age} years old</p>
+        <p>{profession}</p>
+    </header>
+
+    <section>
+        <h2>About Me</h2>
+        <p>{about}</p>
+    </section>
+
+    <section>
+        <h2>Contact</h2>
+        <p>Email: {email}</p>
+        <p>Location: {location}</p>
+    </section>
+
+    <section>
+        <h2>Skills</h2>
+        <p>{skills}</p>
+    </section>
+
+</body>
+</html>

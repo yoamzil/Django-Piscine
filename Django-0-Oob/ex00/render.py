@@ -20,6 +20,7 @@ def parseSettings(settingsFile):
         content = f.read()
         dictionnary = {}
         exec(content, dictionnary)
+        dictionnary.pop("__builtins__", None)
     return dictionnary
 
 def main():
@@ -27,9 +28,13 @@ def main():
         name, ext = os.path.splitext(sys.argv[1])
         if (ext == ".template"):
             if (os.path.exists(sys.argv[1])):
-                settingsDict = parseSettings("./settings.py")
-                parsed = parseTemplate(sys.argv[1], settingsDict)
-                generateHTML(parsed, name)
+                if (os.path.exists("./settings.py")):
+                    settingsDict = parseSettings("./settings.py")
+                    parsed = parseTemplate(sys.argv[1], settingsDict)
+                    if parsed is not None:
+                        generateHTML(parsed, name)
+                else:
+                    print("settings.py not found.")
             else:
                 print("File not found.")
         else:
