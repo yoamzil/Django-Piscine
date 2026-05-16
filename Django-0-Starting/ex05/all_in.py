@@ -16,6 +16,8 @@ def find_capital():
     
     if len(sys.argv) ==  2:
         name_list = sys.argv[1].split(',')
+        if '' in name_list:
+            return
         for name in name_list:
             if name.strip() == '':
                 continue
