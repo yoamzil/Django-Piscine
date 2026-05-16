@@ -1,10 +1,10 @@
-def print_dict(dict):
-        for year, name_list in dict.items():
+def print_dictionary(dictionary):
+        for year, name_list in dictionary.items():
             names = " ".join(name_list)
             print(year, ":", names)
             
 
-def create_dict():
+def create_dictionary():
     d = [
         ('Hendrix' , '1942'),
         ('Allman' , '1946'),
@@ -37,7 +37,7 @@ def create_dict():
             dictionary[year].append(name)
         else:
             dictionary[year] = [name]
-    print_dict(dictionary)
+    print_dictionary(dictionary)
 
 if __name__ == '__main__':
-    create_dict()
+    create_dictionary()
