@@ -1,12 +1,9 @@
 def printNumbers():
-    f = open("numbers.txt", "r")
-    content = f.read()
-    f.close
-    
+    with open("numbers.txt", "r") as f:
+        content = f.read().strip()
     numbers_list = content.split(',')
     for num in numbers_list:
-        print (num)
-    
+        print(num)
 
 if __name__ == '__main__':
     printNumbers()
