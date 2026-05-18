@@ -3,7 +3,7 @@ import random
 from beverages import HotBeverage, Coffee, Tea, Cappuccino
 
 
-class CoffeMachine:
+class CoffeeMachine:
     def __init__(self):
         self.drinkServed = 0
         self.is_broken = False
@@ -37,7 +37,7 @@ class CoffeMachine:
 
 
 def main():
-    cm = CoffeMachine()
+    cm = CoffeeMachine()
     try:
         while True:
             coffee = cm.serve(Coffee)
@@ -46,7 +46,7 @@ def main():
             print(tea)
             cappuccino = cm.serve(Cappuccino)
             print(cappuccino)            
-    except CoffeMachine.BrokenMachineException as e:
+    except CoffeeMachine.BrokenMachineException as e:
         print(e)
     cm.repair()
     try:
@@ -57,7 +57,7 @@ def main():
             print(tea)
             cappuccino = cm.serve(Cappuccino)
             print(cappuccino)            
-    except CoffeMachine.BrokenMachineException as e:
+    except CoffeeMachine.BrokenMachineException as e:
         print(e)
 
 
